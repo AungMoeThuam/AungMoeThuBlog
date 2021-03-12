@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/AungMoeThuBlog/static/css/main.5874c3eb.chunk.css",
+    "main.js": "/AungMoeThuBlog/static/js/main.42f9c74a.chunk.js",
+    "main.js.map": "/AungMoeThuBlog/static/js/main.42f9c74a.chunk.js.map",
+    "runtime-main.js": "/AungMoeThuBlog/static/js/runtime-main.02623450.js",
+    "runtime-main.js.map": "/AungMoeThuBlog/static/js/runtime-main.02623450.js.map",
+    "static/js/2.34c80d76.chunk.js": "/AungMoeThuBlog/static/js/2.34c80d76.chunk.js",
+    "static/js/2.34c80d76.chunk.js.map": "/AungMoeThuBlog/static/js/2.34c80d76.chunk.js.map",
+    "index.html": "/AungMoeThuBlog/index.html",
+    "static/css/main.5874c3eb.chunk.css.map": "/AungMoeThuBlog/static/css/main.5874c3eb.chunk.css.map",
+    "static/js/2.34c80d76.chunk.js.LICENSE.txt": "/AungMoeThuBlog/static/js/2.34c80d76.chunk.js.LICENSE.txt",
+    "static/media/hello.5bde74dd.svg": "/AungMoeThuBlog/static/media/hello.5bde74dd.svg",
+    "static/media/home3.ba7bd6c5.jpg": "/AungMoeThuBlog/static/media/home3.ba7bd6c5.jpg",
+    "static/media/slack.ddd06f0d.svg": "/AungMoeThuBlog/static/media/slack.ddd06f0d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.02623450.js",
+    "static/js/2.34c80d76.chunk.js",
+    "static/css/main.5874c3eb.chunk.css",
+    "static/js/main.42f9c74a.chunk.js"
+  ]
+}
