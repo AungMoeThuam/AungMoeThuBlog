@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import * as Ti from "react-icons/ti";
 import * as Go from "react-icons/go";
 import { Link } from "react-router-dom";
@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className=" text-xl font-bold px-5   ">
         <Link
           className="flex justify-between items-center hover:text-gray-400 "
-          to="/"
+          to="/AungMoeThuBlog/"
         >
           <div>
             <img src={logo} className=" border rounded-full p-1 w-10" />
@@ -24,9 +24,7 @@ const Navbar = () => {
       </div>
 
       <div
-        onClick={() => {
-          setSlider(!slider);
-        }}
+        onClick={() => setSlider(!slider)}
         className=" md:hidden text-4xl cursor-pointer hover:text-yellow-500 "
       >
         {slider ? <Go.GoX /> : <Ti.TiThMenu />}
