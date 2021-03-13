@@ -34,7 +34,7 @@ const Navbar = () => {
       {slider ? <Dropdown setSlider={setSlider} /> : null}
 
       <div className="hidden md:block ">
-        <Link className="p-4 hover:text-gray-400 " to="/">
+        <Link className="p-4 hover:text-gray-400 " to="/AungMoeThuBlog/">
           Home
         </Link>
 
@@ -58,7 +58,7 @@ export default Navbar;
 
 const hover = "w-full hover:bg-yellow-400 p-4 ";
 const item = [
-  { name: "Home", animation: hover, to: "/" },
+  { name: "Home", animation: hover, to: "/AungMoeThuBlog/" },
   { name: "Blogs", animation: hover, to: "/blogs" },
   { name: "Contact", animation: hover, to: "/contact" },
   { name: "About", animation: hover, to: "/about" },
