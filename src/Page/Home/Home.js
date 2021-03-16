@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import home3 from "../assets/img/home3.jpg";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import home3 from "../../assets/img/home3.jpg";
+import "./Home.css";
 import { motion } from "framer-motion";
 
 const Home = (props) => {
@@ -15,12 +15,13 @@ const Home = (props) => {
       className="   flex justify-center items-center  h-screen "
     >
       <div
-        style={{
-          backgroundImage: `url(${home3})`,
-        }}
-        className=" bg-cover w-full bg-center md:bg-cover flex p-10 justify-center text-white items-center font-extrabold  text-3xl md:text-6xl h-screen "
+        id="home"
+        // style={{
+        //   backgroundImage: `url(${home3})`,
+        // }}
+        className=" bg-cover w-full bg-center md:bg-cover flex p-10 justify-center text-black md:text-white items-center font-extrabold  text-3xl md:text-6xl h-screen "
       >
-        <div className=" border-8 text-center rounded-2xl p-10 border-white hover:bg-white hover:text-gray-900 transition transform hover:scale-125 duration-300">
+        <div className=" border-8 text-center rounded-2xl p-10 border-white  hover:bg-black hover:text-white transition transform hover:scale-125 duration-300">
           <h1>Hello Friends!</h1>
         </div>
       </div>
