@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { motion } from "framer-motion";
 
 const Blogs = () => {
   const [loading, setLoading] = useState(true);
@@ -19,24 +20,26 @@ const Blogs = () => {
     setI(a);
   }
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      {loading === false ? (
-        <div className="h-screen text-4xl text-bold flex justify-center items-center">
-          <div>
-            <Button action={deleteItem} name="Delete " />
-            <Button action={resetItem} name="Reset " />
-          </div>
-
-          {item ? (
-            <div onTransitionEnd={() => setItem(false)} className={i}>
-              <h1>Blogs</h1>
-            </div>
-          ) : null}
+    <motion.div
+      initial={{ x: 1000, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 1000, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="h-screen  flex justify-center items-center"
+    >
+      <div className="h-screen text-4xl text-bold flex justify-center items-center">
+        <div>
+          <Button action={deleteItem} name="Delete " />
+          <Button action={resetItem} name="Reset " />
         </div>
-      ) : (
-        <CircularProgress />
-      )}
-    </div>
+
+        {item ? (
+          <div onTransitionEnd={() => setItem(false)} className={i}>
+            <h1>Blogs</h1>
+          </div>
+        ) : null}
+      </div>
+    </motion.div>
   );
 };
 

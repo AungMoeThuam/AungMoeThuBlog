@@ -3,6 +3,7 @@ import * as Ti from "react-icons/ti";
 import * as Go from "react-icons/go";
 import { Link } from "react-router-dom";
 import logo from "../assets/svg/slack.svg";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [slider, setSlider] = useState(false);
@@ -25,11 +26,14 @@ const Navbar = () => {
 
       <div
         onClick={() => setSlider(!slider)}
-        className=" md:hidden text-4xl cursor-pointer hover:text-yellow-500 "
+        className="md:hidden text-4xl cursor-pointer hover:text-yellow-500"
       >
         {slider ? <Go.GoX /> : <Ti.TiThMenu />}
       </div>
-      {slider ? <Dropdown setSlider={setSlider} /> : null}
+      <AnimatePresence>
+        {" "}
+        {slider ? <Dropdown setSlider={setSlider} /> : null}
+      </AnimatePresence>
 
       <div className="hidden md:block ">
         <Link className="p-4 hover:text-gray-400 " to="/AungMoeThuBlog/">
@@ -64,17 +68,21 @@ const item = [
 
 const Dropdown = ({ setSlider }) => {
   const a =
-    "absolute top-16 left-0 w-full flex flex-col text-center  bg-white md:hidden  ";
+    "absolute top-16 left-0 w-full flex flex-col text-center border-yellow-500 border-b-4 bg-white  md:hidden  ";
 
   function setSlider2() {
     setSlider(false);
   }
 
   return (
-    <div
-      onMouseLeave={() => {
-        setSlider(false);
-      }}
+    <motion.div
+      initial={{ y: -300, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -500, opacity: 0 }}
+      transition={{ duration: 0.7 }}
+      // onMouseLeave={() => {
+      //   setSlider(false);
+      // }}
       className={a}
     >
       {item.map((item, index) => {
@@ -88,7 +96,7 @@ const Dropdown = ({ setSlider }) => {
           />
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 
